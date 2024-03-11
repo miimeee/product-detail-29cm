@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
-
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
 * {
   box-sizing: border-box;
 }
@@ -16,14 +16,15 @@ a {
 }
 ul {
   padding: 0;
+  margin: 0;
 }
 li {
   list-style: none;
 }
 
 .container-inner {
-  min-width: 900px;
-  max-width: 1300px;
+  width: 1280px;
+  height: 450px;
   margin: 0 auto;
   padding: 40px 50px 0;
 }
@@ -64,21 +65,28 @@ li {
 }
 
 .product-detail {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
-}
-.product-img-contanier {
-  border: 1px solid red;
-  flex: 1;
+  height: 100%;
+
   position: relative;
   overflow: hidden;
+}
+.product-img-contanier {
+  /* border: 1px solid red; */
+  /* flex: 1; */
+  position: relative;
+  overflow: hidden;
+  width: 47%;
   height: 100%;
+
+  top: 0;
+  left: 0;
 }
 .img-slider-inner {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   position: absolute;
   top: 0;
   left: 0;
@@ -96,9 +104,61 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  vertical-align: middle;
+}
+
+/* 화살표 */
+.product-img-arrow {
+}
+.product-img-arrow button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  cursor: pointer;
+}
+.product-img-arrow button:nth-child(1) {
+  left: 0;
+}
+.product-img-arrow button:nth-child(2) {
+  right: 0;
+}
+.product-img-arrow button i{
+  font-size: 2em;
+  color: #bbbbbb;
+}
+.product-img-arrow button i:hover{
+  color: #000;
+}
+
+
+/* 페이지네이션 */
+.product-img-pagenation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.product-img-pagenation li {
+  display: inline-block;
+}
+.product-img-pagenation li button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bbbbbb;
+  cursor: pointer;
+}
+.product-img-pagenation li button:hover{
+  background-color: #000;
 }
 
 .product-info-contanier {
   border: 1px solid green;
-  flex: 1;
+  width: 100%;
+  padding-left: 40px;
+  /* flex: 1; */
 }
