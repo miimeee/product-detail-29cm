@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  /* font-weight: 400;
+  font-style: normal; */
+  margin: 0;
+  color: #000;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+.container-inner {
+  min-width: 900px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 50px 0;
+}
+
+.brand {
+  border: 1px solid red;
+  width: 100%;
+}
+.brand a {
+  display: flex;
+}
+.brand-name {
+  padding-left: 15px;
+}
+.brand-name h3 {
+  margin: 0;
+  line-height: 22px;
+  font-weight: 600;
+}
+.brand-name p {
+  margin: 0;
+  font-size: 13px;
+}
+.brand-name div {
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  height: 25px;
+  width: 95px;
+  min-height: 25px;
+  min-width: 40px;
+  padding: 0 9px;
+  margin-top: 5px;
+
+  text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.product-detail {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+.product-img-contanier {
+  border: 1px solid red;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.img-slider-inner {
+  border: 1px solid #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* left: -100%면 다음이미지 보임 */
+  width: 200%;
+}
+.img-slider-inner li {
+  width: 50%;
+  float: left;
+  display: flex;
+}
+.image {
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info-contanier {
+  border: 1px solid green;
+  flex: 1;
+}
