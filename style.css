@@ -110,7 +110,7 @@ li {
 /* 화살표 */
 .product-img-arrow {
 }
-.product-img-arrow button {
+.arrow-btn {
   background-color: transparent;
   border: none;
   position: absolute;
@@ -118,20 +118,19 @@ li {
   width: 30px;
   cursor: pointer;
 }
-.product-img-arrow button:nth-child(1) {
+.arrow-btn:nth-child(1) {
   left: 0;
 }
-.product-img-arrow button:nth-child(2) {
+.arrow-btn:nth-child(2) {
   right: 0;
 }
-.product-img-arrow button i{
+.arrow-btn i {
   font-size: 2em;
-  color: #bbbbbb;
+  color: #dddddd;
 }
-.product-img-arrow button i:hover{
+.arrow-btn.active i {
   color: #000;
 }
-
 
 /* 페이지네이션 */
 .product-img-pagenation {
@@ -152,7 +151,7 @@ li {
   background-color: #bbbbbb;
   cursor: pointer;
 }
-.product-img-pagenation li button:hover{
+.product-img-pagenation li button:hover {
   background-color: #000;
 }
 

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -48,13 +50,13 @@
             </div>
 
             <div class="product-img-arrow">
-              <button><i class="fa-solid fa-angle-left"></i></button>
-              <button><i class="fa-solid fa-angle-right"></i></button>
+              <button class="arrow-btn"><i class="fa-solid fa-angle-left"></i></button>
+              <button class="arrow-btn active"><i class="fa-solid fa-angle-right"></i></button>
             </div>
 
             <ul class="product-img-pagenation">
-              <li><button></button></li>
-              <li><button></button></li>
+              <li><button id="pagenation-btn"></button></li>
+              <li><button id="pagenation-btn"></button></li>
             </ul>
           </div>
 
