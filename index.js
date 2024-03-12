@@ -1,9 +1,7 @@
 $(function () {
   const $prevButton = $(".arrow-btn:not(.active)");
   const $nextButton = $(".arrow-btn.active");
-
   const $sliderInner = $(".img-slider-inner");
-
   const $firstPage = $(".pagenation-btn.active");
   const $secondPage = $(".pagenation-btn:not(.active)");
 
