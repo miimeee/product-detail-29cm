@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 @import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 * {
   box-sizing: border-box;
 }
@@ -21,6 +22,76 @@ ul {
 }
 li {
   list-style: none;
+}
+.tab-container {
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tab-container > div > ul {
+  display: flex;
+}
+.tab-box > li {
+  display: flex;
+}
+.tab-box > li:not(:first-of-type)::before {
+  content: "\F657";
+  font-family: bootstrap-icons;
+  font-size: 22px;
+  font-weight: 100;
+  color: #a8a8a8;
+  transform: rotate(-20deg) translate(2px, 5px);
+  margin: 0;
+}
+.tab-box > li > div {
+  display: inline-block;
+  height: 33px;
+  width: 150px;
+}
+.tab-title {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.tab-title span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.tab-title i {
+  width: 23px;
+  height: 23px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  line-height: 22px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.tab-content {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #303033;
+  width: 150px;
+  position: absolute;
+  z-index: 10;
+}
+.tab-content ul li {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0 5px 20px;
+}
+.tab-content ul li a {
+  font-size: 12px;
+  color: #5d5d5d;
+}
+.tab-content ul li:hover{
+  background-color: #dbdbdb;
+}
+.tab-box > li > div:hover .tab-content {
+  display: block;
 }
 .container-inner {
   width: 1280px;
@@ -56,7 +127,6 @@ li {
   min-width: 40px;
   padding: 0 9px;
   margin-top: 5px;
-
   text-transform: uppercase;
   font-size: 11px;
   text-align: center;
@@ -170,12 +240,12 @@ li {
   display: flex;
   margin: 15px 0;
 }
-.product-star div i{
+.product-star div i {
   width: 10px;
   height: 10px;
   margin-right: 5px;
 }
-.product-star button{
+.product-star button {
   border: none;
   background-color: transparent;
   text-decoration: underline;
@@ -211,7 +281,7 @@ li {
   width: 100%;
   padding: 0;
 }
-.coupon i{
+.coupon i {
   padding: 9px 0 0 15px;
 }
 .product-price p {
