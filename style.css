@@ -23,6 +23,38 @@ ul {
 li {
   list-style: none;
 }
+header{
+  width: 100%;
+}
+.logo > div{
+  display: flex;
+  justify-content: space-between;
+}
+.logo > div > a{
+  overflow: hidden;
+  display: inline-block;
+  width: 90px;
+  height: 24px;
+  background: url(/images/logo-29cm.png) no-repeat;
+  background-size: 90px 24px;
+}
+.logo ul{
+  display: flex;
+}
+.header-container{}
+.category01{
+  display: flex;
+  justify-content: space-between;
+}
+.category01 ul{
+  display: flex;
+}
+.category02{
+  display: flex;
+}
+.category02 ul{
+  display: flex;
+}
 .tab-container {
   width: 100%;
   margin-top: 35px;
