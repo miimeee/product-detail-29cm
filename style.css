@@ -32,8 +32,6 @@ header {
   padding: 40px 40px 20px;
   background-color: #fff;
 }
-.header-container {
-}
 .logo {
   margin-bottom: 20px;
 }
@@ -96,6 +94,7 @@ header {
 .category01 div i {
   font-size: 45px;
   font-weight: 500;
+  cursor: pointer;
 }
 .category02 {
   display: flex;
@@ -104,7 +103,10 @@ header {
 .category02 ul {
   display: flex;
 }
-.category02 ul:first-child{
+.category02 ul li{
+  cursor: pointer;
+}
+.category02 ul:first-child {
   border-right: 1px solid #000;
 }
 .category02 ul:nth-of-type(1) li {
@@ -121,7 +123,7 @@ header {
   vertical-align: top;
 }
 .category02 ul:nth-of-type(1) li a,
-.category02 ul:nth-of-type(1) li div{
+.category02 ul:nth-of-type(1) li div {
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -131,7 +133,7 @@ header {
   font-weight: 300;
 }
 .category02 ul li:hover a,
-.category02 ul:nth-of-type(1) li:hover div{
+.category02 ul:nth-of-type(1) li:hover div {
   border-bottom: 4px solid #000;
 }
 .tab-container {
@@ -144,6 +146,9 @@ header {
 }
 .tab-container > div > ul {
   display: flex;
+}
+.tab-container > div > ul li{
+  cursor: pointer;
 }
 .tab-box > li {
   display: flex;
@@ -234,9 +239,7 @@ header {
   border-radius: 2px;
   height: 25px;
   width: 95px;
-  min-height: 25px;
-  min-width: 40px;
-  padding: 0 9px;
+  padding: 0 5px;
   margin-top: 5px;
   text-transform: uppercase;
   font-size: 11px;
@@ -282,7 +285,7 @@ header {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 50%;
+  top: 25%;
   width: 30px;
   cursor: pointer;
 }
@@ -301,7 +304,7 @@ header {
 }
 .product-img-pagenation {
   position: absolute;
-  bottom: 0;
+  bottom: 350px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -346,17 +349,23 @@ header {
   height: 100%;
   text-align: center;
   border-left: 1px solid #e4e4e4;
+  cursor: pointer;
+  font-size: 25px;
+}
+.product-name div:nth-child(2) i.active{
+  color: #ff4800;
 }
 .product-star {
   display: flex;
   margin: 15px 0;
+  align-items: center;
 }
 .product-star div i {
   width: 10px;
   height: 10px;
   margin-right: 5px;
 }
-.product-star button {
+.product-star a {
   border: none;
   background-color: transparent;
   text-decoration: underline;
@@ -384,6 +393,7 @@ header {
   background-color: #000;
   color: #fff;
   padding: 0 15px;
+  cursor: pointer;
 }
 .coupon button {
   background-color: #000;
@@ -391,6 +401,7 @@ header {
   border: none;
   width: 100%;
   padding: 0;
+  cursor: pointer;
 }
 .coupon i {
   padding: 9px 0 0 15px;
@@ -428,9 +439,11 @@ header {
   color: #d4d4d4;
   margin-top: 10px;
   margin-left: 5px;
+  cursor: pointer;
 }
 .info-inner02 div:nth-child(2) {
   padding-top: 10px;
+  cursor: pointer;
 }
 .info-inner02 div:nth-child(2) span:nth-child(1) {
   color: #a0a0a0;
@@ -456,6 +469,7 @@ header {
   padding: 0;
   padding-top: 12px;
   font-weight: 700;
+  cursor: pointer;
 }
 /* 배송정보 */
 .info-inner04 {
@@ -470,8 +484,6 @@ header {
 .info-inner04 ul li span {
   width: 100px;
   height: 50px;
-  /* min-width: auto;
-  min-height: auto; */
 }
 .info-inner04 ul li div {
   width: 100%;
@@ -488,35 +500,91 @@ header {
   width: 100%;
   height: auto;
 }
-/* color, btn */
+/* option, order button */
 .info-inner05 {
   border-top: 1px solid #d4d4d4;
   padding-top: 20px;
 }
-.info-inner05 div {
-  display: flex;
+.option-container {
+  position: relative;
 }
-.info-inner05 div input[type="text"] {
+.option input[type="text"] {
   border: 1px solid #d4d4d4;
   width: 100%;
   height: 35px;
   padding: 0 30px 0 14px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   outline: none;
+  cursor: pointer;
 }
-.info-inner05 div button {
+#option-name {
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  overflow: scroll;
+  max-height: 150px;
+  display: none;
+  cursor: pointer;
+}
+#option-name.active{
+  display: block
+}
+#option-name li {
+  padding: 10px 15px;
+  font-size: 13px;
+  color: #5d5d5d;
+}
+#option-name li:hover{
+  background-color: #dbdbdb;;
+}
+.total-price{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+.total-price span:nth-child(1){
+  font-size: 14px;
+  margin-right: 10px;
+}
+.total-price span:nth-child(2){
+  font-size: 18px;
+  color: #ff4800;
+}
+.total-price span:nth-child(2) strong{
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff4800;
+  margin-right: 2px;
+}
+.order-container {
+  width: 100%;
+  display: flex;
+}
+.order-container button {
   height: 50px;
+  width: 100%;
   flex: 1;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
 }
-.info-inner05 div button:nth-child(1) {
+.order-container button:nth-child(1) {
   border: 1px solid #d4d4d4;
   background-color: #fff;
   margin-right: 5px;
 }
-.info-inner05 div button:nth-child(2) {
+.order-container button:nth-child(2) {
   border: 1px solid #000;
   background-color: #000;
   color: #fff;
+}
+.order-container button:nth-child(2):hover{
+  border: 1px solid   #FF4800;
+  background-color: #FF4800;
+  box-shadow: 0 0 10px #7e7e7e;
 }
