@@ -25,6 +25,7 @@ ul {
 li {
   list-style: none;
 }
+/* ########## Header ########## */
 header {
   position: sticky;
   top: 0;
@@ -137,6 +138,7 @@ header {
 .category02 > ul:nth-of-type(1) > li:hover > div {
   border-bottom: 4px solid #000;
 }
+/* ########## Main - tab ##########*/
 .tab-container {
   width: 100%;
   margin-top: 35px;
@@ -217,16 +219,17 @@ header {
 .tab-content > ul > li:hover {
   background-color: #dbdbdb;
 }
-
 .tab-box > li > div:hover .tab-content {
   display: block;
 }
-.container-inner {
+/* ########## Main - product ########## */
+.product-container {
   width: 1280px;
   height: 800px;
   margin: 0 auto;
   padding: 40px 50px 0;
 }
+/* Product - brand */
 .brand {
   width: 100%;
   margin-bottom: 20px;
@@ -264,6 +267,7 @@ header {
   background-color: #000;
   color: #fff;
 }
+/* Product - detail */
 .product-detail {
   display: flex;
   justify-content: space-between;
@@ -427,7 +431,7 @@ header {
   margin: 0;
   margin-top: 5px;
 }
-/* 구매가능가격 */
+/* 구매 가능 가격 */
 .info-inner02 {
   border-top: 1px solid #d4d4d4;
   padding: 20px 0;
@@ -463,7 +467,7 @@ header {
 .info-inner02 > div:nth-child(2) > span:nth-child(1) {
   color: #a0a0a0;
 }
-/* 할부정보 */
+/* 할부 정보 */
 .info-inner03 {
   border-top: 1px solid #d4d4d4;
   padding: 20px 0;
@@ -486,7 +490,7 @@ header {
   font-weight: 700;
   cursor: pointer;
 }
-/* 배송정보 */
+/* 배송 정보 */
 .info-inner04 {
   border-top: 1px solid #d4d4d4;
   padding: 20px 0;
@@ -515,7 +519,7 @@ header {
   width: 100%;
   height: auto;
 }
-/* option, order button */
+/* 옵션선택, 주문버튼 */
 .info-inner05 {
   border-top: 1px solid #d4d4d4;
   padding-top: 20px;
