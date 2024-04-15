@@ -47,10 +47,10 @@ $(function(){
 $(function(){
   $(".option").click(function(event){
     event.stopPropagation(); // 중단
-    $(this).siblings("#option-name").toggleClass("active");
+    $(this).siblings(".option-name").toggleClass("active");
   });
 
   $(document).click(function(){
-    $(".option").siblings("#option-name").removeClass("active");
+    $(".option").siblings(".option-name").removeClass("active");
   });
 });
